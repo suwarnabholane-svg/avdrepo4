@@ -3,10 +3,9 @@ name:python external library
 
 
 on:
-   push:
-      branches:
-          -main
-
+  push:
+    branches:
+      - main
 
 jobs:
   run-python-code:
