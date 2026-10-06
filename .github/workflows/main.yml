@@ -1,21 +1,28 @@
-
-name:python external library
+name: pipeline1
 
 on:
- push:
-  branches:
-     -main
+  push:
+    branches:
+      - main
 
 jobs:
   run-python-code:
     runs-on: ubuntu-latest
 
     steps:
-       - name: checkout code
-         uses:actions/checkout@77
+      - name: checkout code 
+        uses: actions/checkout@v7 
+      
+      - name: print python version
+        run: python --version
+      
+      - name: set up python version
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.13' 
+      
+      - name: print python version
+        run: python --version
 
-        - name: install required lobrary
-          run: pip install pandas
-
-        - name: run python
-          run:python data.py
+      - name: run python program
+        run: python welcome.py
