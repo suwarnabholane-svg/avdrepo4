@@ -9,8 +9,8 @@ on:
 
 
 jobs:
-   run-python-code:
-       runs-on: ubuntu-latest
+  run-python-code:
+    runs-on: ubuntu-latest
 
     steps:
        - name: checkout code
